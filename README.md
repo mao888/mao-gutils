@@ -19,6 +19,35 @@
   func UniqueArray(m []string) []string 
   ```
 
+## net
+- ### 验证IPv4的合法性
+  ```go
+  func IsIP4(ip string) bool
+  ```
+
+- ### 验证IPv6的合法性
+  ```go
+  func IsIP6(ip string) bool
+  ```
+
+- ### 验证ID是否合法性
+  ```go
+  // 0: invalid ip
+  // 4: IPv4
+  // 6: IPv6
+  func ParseIP(s string) int
+  ```
+
+- ### 判断IP是否为内网IP
+  ```go
+  func IsPrivateIP(ipStr string) bool
+  ```
+
+- ### 获取内网IP
+  ```go
+  func InternalIp() string
+  ```
+
 ## slice
 
 - ### 切片去重
