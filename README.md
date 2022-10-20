@@ -1,6 +1,24 @@
 # Go Utils README
 基于日常学习及项目需要所积累的go语言常用工具库
 
+## map
+- ### 使用map过滤数组
+  ```go
+  func FilterSliceByMap(filter map[string]struct{}, pram []string, isExist bool) (array []string)
+  ```
+- ### 使用map过滤map
+  ```go
+  func FilterMapByMap(filter map[string]struct{}, pram map[string]string, isExist bool) (array map[string]string)
+  ```
+- ### 合并map
+  ```go
+  func MergeMap(m1, m2 map[string]interface{}) map[string]interface{}
+  ```
+- ### 数组去重
+  ```go
+  func UniqueArray(m []string) []string 
+  ```
+
 ## slice
 
 - ### 切片去重
