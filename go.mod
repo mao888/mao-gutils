@@ -10,6 +10,7 @@ require (
 	github.com/fogleman/gg v1.3.0
 	github.com/gin-gonic/gin v1.8.1
 	github.com/golang/protobuf v1.5.2
+	github.com/google/uuid v1.3.0
 	github.com/natefinch/lumberjack v2.0.0+incompatible
 	github.com/rabbitmq/amqp091-go v1.4.0
 	github.com/robfig/cron/v3 v3.0.1
