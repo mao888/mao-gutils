@@ -29,8 +29,35 @@
     ``` go
   func removeStructRepByMap(slc []*SeriesRes) []*SeriesRes
     ```
+## strings
+- ### 去除空格
+  ```go
+  func TrimSpace(str string) string
+  ```
 
+- ### 返回可比较的字符串，当传入非法ASCII码时返回空字符串
+  ```go
+  func VersionOrdinal(version string) string
+  ```
+- ### 比较两个版本号（版本号只有数字和点组成）
+  ```go
+  func VersionGreater(versionA, versionB string) int
+  ```
 
+- ### 通过Builder拼接字符串
+  ```go
+  func StringJoin(strs ...string) string
+  ```
+
+- ### 精准的字符串匹配，区分大小写
+  ```go
+  func IsExactExist(array []string, row string) bool
+  ```
+
+- ### 将字符串切片转化成int32切片
+  ```go
+  func Str2Int32Array(strArray []string) ([]int32, error)
+  ```
 
 ## struct
 - ### 拷贝结构体
@@ -40,3 +67,5 @@
 
 
 持续更新
+
+交流qq群：1007576722

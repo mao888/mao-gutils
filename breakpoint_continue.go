@@ -20,8 +20,8 @@ const (
 //@author: [piexlmax](https://github.com/piexlmax)
 //@function: BreakPointContinue
 //@description: 断点续传
-//@param: content []byte, fileName string, contentNumber int, contentTotal int, fileMd5 string
-//@return: error, string
+//@param: content []byte, fileName strings, contentNumber int, contentTotal int, fileMd5 strings
+//@return: error, strings
 
 func BreakPointContinue(content []byte, fileName string, contentNumber int, contentTotal int, fileMd5 string) (error, string) {
 	path := breakpointDir + fileMd5 + "/"
@@ -36,7 +36,7 @@ func BreakPointContinue(content []byte, fileName string, contentNumber int, cont
 //@author: [piexlmax](https://github.com/piexlmax)
 //@function: CheckMd5
 //@description: 检查Md5
-//@param: content []byte, chunkMd5 string
+//@param: content []byte, chunkMd5 strings
 //@return: CanUpload bool
 
 func CheckMd5(content []byte, chunkMd5 string) (CanUpload bool) {
@@ -51,8 +51,8 @@ func CheckMd5(content []byte, chunkMd5 string) (CanUpload bool) {
 //@author: [piexlmax](https://github.com/piexlmax)
 //@function: makeFileContent
 //@description: 创建切片内容
-//@param: content []byte, fileName string, FileDir string, contentNumber int
-//@return: error, string
+//@param: content []byte, fileName strings, FileDir strings, contentNumber int
+//@return: error, strings
 
 func makeFileContent(content []byte, fileName string, FileDir string, contentNumber int) (error, string) {
 	path := FileDir + fileName + "_" + strconv.Itoa(contentNumber)
@@ -72,8 +72,8 @@ func makeFileContent(content []byte, fileName string, FileDir string, contentNum
 //@author: [piexlmax](https://github.com/piexlmax)
 //@function: makeFileContent
 //@description: 创建切片文件
-//@param: fileName string, FileMd5 string
-//@return: error, string
+//@param: fileName strings, FileMd5 strings
+//@return: error, strings
 
 func MakeFile(fileName string, FileMd5 string) (error, string) {
 	rd, err := ioutil.ReadDir(breakpointDir + FileMd5)
@@ -100,7 +100,7 @@ func MakeFile(fileName string, FileMd5 string) (error, string) {
 //@author: [piexlmax](https://github.com/piexlmax)
 //@function: RemoveChunk
 //@description: 移除切片
-//@param: FileMd5 string
+//@param: FileMd5 strings
 //@return: error
 
 func RemoveChunk(FileMd5 string) error {

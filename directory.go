@@ -11,7 +11,7 @@ import (
 //@author: [piexlmax](https://github.com/piexlmax)
 //@function: PathExists
 //@description: 文件目录是否存在
-//@param: path string
+//@param: path strings
 //@return: bool, error
 
 func PathExists(path string) (bool, error) {
@@ -31,7 +31,7 @@ func PathExists(path string) (bool, error) {
 //@author: [piexlmax](https://github.com/piexlmax)
 //@function: CreateDir
 //@description: 批量创建文件夹
-//@param: dirs ...string
+//@param: dirs ...strings
 //@return: err error
 
 func CreateDir(dirs ...string) (err error) {

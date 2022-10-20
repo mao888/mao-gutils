@@ -231,7 +231,7 @@ func (c *Context) glyph(glyph truetype.Index, p raster.Point) (
 // is placed so that the left edge of the em square of the first character of s
 // and the baseline intersect at p. The majority of the affected pixels will be
 // above and to the right of the point, but some may be below or to the left.
-// For example, drawing a string that starts with a 'J' in an italic font may
+// For example, drawing a strings that starts with a 'J' in an italic font may
 // affect pixels below and left of the point.
 // p is a raster.Point and can therefore represent sub-pixel positions.
 func (c *Context) DrawString(s string, p raster.Point) (raster.Point, error) {

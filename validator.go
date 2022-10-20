@@ -17,7 +17,7 @@ var CustomizeMap = make(map[string]Rules)
 //@author: [piexlmax](https://github.com/piexlmax)
 //@function: RegisterRule
 //@description: 注册自定义规则方案建议在路由初始化层即注册
-//@param: key string, rule Rules
+//@param: key strings, rule Rules
 //@return: err error
 
 func RegisterRule(key string, rule Rules) (err error) {
@@ -32,7 +32,7 @@ func RegisterRule(key string, rule Rules) (err error) {
 //@author: [piexlmax](https://github.com/piexlmax)
 //@function: NotEmpty
 //@description: 非空 不能为其对应类型的0值
-//@return: string
+//@return: strings
 
 func NotEmpty() string {
 	return "notEmpty"
@@ -41,8 +41,8 @@ func NotEmpty() string {
 //@author: [zooqkl](https://github.com/zooqkl)
 //@function: RegexpMatch
 //@description: 正则校验 校验输入项是否满足正则表达式
-//@param:  rule string
-//@return: string
+//@param:  rule strings
+//@return: strings
 func RegexpMatch(rule string) string {
 	return "regexp=" + rule
 }
@@ -50,8 +50,8 @@ func RegexpMatch(rule string) string {
 //@author: [piexlmax](https://github.com/piexlmax)
 //@function: Lt
 //@description: 小于入参(<) 如果为string array Slice则为长度比较 如果是 int uint float 则为数值比较
-//@param: mark string
-//@return: string
+//@param: mark strings
+//@return: strings
 
 func Lt(mark string) string {
 	return "lt=" + mark
@@ -60,8 +60,8 @@ func Lt(mark string) string {
 //@author: [piexlmax](https://github.com/piexlmax)
 //@function: Le
 //@description: 小于等于入参(<=) 如果为string array Slice则为长度比较 如果是 int uint float 则为数值比较
-//@param: mark string
-//@return: string
+//@param: mark strings
+//@return: strings
 
 func Le(mark string) string {
 	return "le=" + mark
@@ -70,8 +70,8 @@ func Le(mark string) string {
 //@author: [piexlmax](https://github.com/piexlmax)
 //@function: Eq
 //@description: 等于入参(==) 如果为string array Slice则为长度比较 如果是 int uint float 则为数值比较
-//@param: mark string
-//@return: string
+//@param: mark strings
+//@return: strings
 
 func Eq(mark string) string {
 	return "eq=" + mark
@@ -80,8 +80,8 @@ func Eq(mark string) string {
 //@author: [piexlmax](https://github.com/piexlmax)
 //@function: Ne
 //@description: 不等于入参(!=)  如果为string array Slice则为长度比较 如果是 int uint float 则为数值比较
-//@param: mark string
-//@return: string
+//@param: mark strings
+//@return: strings
 
 func Ne(mark string) string {
 	return "ne=" + mark
@@ -90,8 +90,8 @@ func Ne(mark string) string {
 //@author: [piexlmax](https://github.com/piexlmax)
 //@function: Ge
 //@description: 大于等于入参(>=) 如果为string array Slice则为长度比较 如果是 int uint float 则为数值比较
-//@param: mark string
-//@return: string
+//@param: mark strings
+//@return: strings
 
 func Ge(mark string) string {
 	return "ge=" + mark
@@ -100,8 +100,8 @@ func Ge(mark string) string {
 //@author: [piexlmax](https://github.com/piexlmax)
 //@function: Gt
 //@description: 大于入参(>) 如果为string array Slice则为长度比较 如果是 int uint float 则为数值比较
-//@param: mark string
-//@return: string
+//@param: mark strings
+//@return: strings
 
 func Gt(mark string) string {
 	return "gt=" + mark
@@ -161,7 +161,7 @@ func Verify(st interface{}, roleMap Rules) (err error) {
 //@author: [piexlmax](https://github.com/piexlmax)
 //@function: compareVerify
 //@description: 长度和数字的校验方法 根据类型自动校验
-//@param: value reflect.Value, VerifyStr string
+//@param: value reflect.Value, VerifyStr strings
 //@return: bool
 
 func compareVerify(value reflect.Value, VerifyStr string) bool {
@@ -206,7 +206,7 @@ func isBlank(value reflect.Value) bool {
 //@author: [piexlmax](https://github.com/piexlmax)
 //@function: compare
 //@description: 比较函数
-//@param: value interface{}, VerifyStr string
+//@param: value interface{}, VerifyStr strings
 //@return: bool
 
 func compare(value interface{}, VerifyStr string) bool {
