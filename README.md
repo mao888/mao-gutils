@@ -1,6 +1,16 @@
 # Go Utils README
 基于日常学习及项目需要所积累的go语言常用工具库
 
+## bytes
+- ### int64 to byte
+  ```go
+  func Int64ToBytes(i int64) []byte
+  ```
+- ### byte to int64
+  ```go
+  func BytesToInt64(buf []byte) int64
+  ```
+
 ## map
 - ### 使用map过滤数组
   ```go
