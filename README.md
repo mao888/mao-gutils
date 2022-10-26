@@ -23,6 +23,12 @@
   func Hash32(data string) uint32
   ```
 
+## html
+- ### 删除html标签
+  ```go
+  func TrimHtml(src string) string
+  ```
+
 ## map
 - ### 使用map过滤数组
   ```go
