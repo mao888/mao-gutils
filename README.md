@@ -29,6 +29,56 @@
   func TrimHtml(src string) string
   ```
 
+## http
+- ### http请求
+  ```go
+  func HttpDO(method string, url string, body io.Reader,
+	header map[string][]string) (httpStatus int, resp []byte, err error)
+  
+  func HttpDOTimeOut(method string, url string, body io.Reader,
+	header map[string][]string, millisecond int) (httpStatus int, resp []byte, err error)
+  ```
+- ### http POST 请求
+  ```go
+  func HttpPost(url string, body io.Reader,
+	header map[string][]string) (httpStatus int, resp []byte, err error)
+  ```
+- ### http GET 请求
+  ```go
+  func HttpGet(url string, body io.Reader,
+      header map[string][]string) (httpStatus int, resp []byte, err error)
+  ```
+- ### http Post Json 请求
+  ```go
+  func HttpPostJson(url string, body []byte,
+      header map[string][]string) (httpStatus int, resp []byte, err error)
+  
+  func HttpPostTimeOut(url string, body io.Reader,
+	header map[string][]string, millisecond int) (httpStatus int, resp []byte, err error)
+  
+  func HttpPostJsonTimeOut(url string, body []byte,
+	header map[string][]string, millisecond int) (httpStatus int, resp []byte, err error)
+  ```
+- ### http GET Json 请求
+  ```go
+  func HttpGetJson(url string, body []byte,
+      header map[string][]string) (httpStatus int, resp []byte, err error)
+  
+  func HttpGetTimeOut(url string, body io.Reader,
+	header map[string][]string, millisecond int) (httpStatus int, resp []byte, err error)
+  
+  func HttpGetJsonTimeOut(url string, body []byte,
+	header map[string][]string, millisecond int) (httpStatus int, resp []byte, err error)
+  ```
+- ### http Form 请求
+  ```go
+  func HttpPostForm(postUrl string, body map[string][]string,
+      header map[string][]string) (httpStatus int, resp []byte, err error)
+  
+  func HttpPostFormTimeOut(postUrl string, body map[string][]string,
+	header map[string][]string, millisecond int) (httpStatus int, resp []byte, err error)
+  ```
+
 ## map
 - ### 使用map过滤数组
   ```go
