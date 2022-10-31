@@ -79,6 +79,40 @@
 	header map[string][]string, millisecond int) (httpStatus int, resp []byte, err error)
   ```
 
+## json
+- ###
+  ```go
+  func JSON2Object(data []byte, obj interface{})
+  
+  func JSON2ObjectE(data []byte, obj interface{})
+  
+  func JSON2ObjectUseNumberE(data []byte, obj interface{}) (err error)
+  
+  func Object2JSON(obj interface{}) string
+  
+  func Object2JSONByte(obj interface{}) []byte
+  
+  func Object2JSONByteE(obj interface{}) ([]byte, error)
+  
+  func Object2JSONE(obj interface{}) (string, error)
+  
+  func JSON2Map(json []byte) map[string]interface{}
+  
+  func JSON2MapUseNumber(json []byte) map[string]interface{}
+  
+  // Valid 验证JSON字符串是否合法。此方法只验证标准格式的，开头和结尾为{}
+  // jsoniter.Valid方法“abc”也可以验证通过
+  func Valid(json []byte) bool
+  
+  func GzipEncode(body []byte) (result []byte)
+  
+  func GzipDecode(body []byte) (result []byte)
+  
+  func HuffmanEncode(body []byte) (result []byte)
+  
+  func HuffmanDecode(body []byte) (result []byte)
+  ```
+
 ## map
 - ### 使用map过滤数组
   ```go
