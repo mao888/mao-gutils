@@ -1,4 +1,4 @@
-module go-utils
+module github.com/mao888/go-utils
 
 go 1.18
 
