@@ -160,6 +160,16 @@
   func InternalIp() string
   ```
 
+## os
+- ### 使用map替换template模版中 $ 符号后的字符串
+  ```go
+  func ExpandByMap(template string, fields map[string]string) string
+  ```
+- ### 自定义函数规则替换字符串模版中 $ 符号后的字符串
+  ```go
+  func ExpandByFun(str string, f func(string) string) string
+  ```
+
 ## slice
 
 - ### 切片去重
