@@ -1,7 +1,7 @@
 package utils
 
 import (
-	"go-utils/md5"
+	"github.com/mao888/go-utils/md5"
 	"io/ioutil"
 	"os"
 	"strconv"
