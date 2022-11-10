@@ -130,6 +130,10 @@
   ```go
   func UniqueArray(m []string) []string 
   ```
+- ### 根据 "," 分割map为map数组
+  ```go
+  func MapSplitByComma(fields map[string]string) []map[string]string
+  ```
 
 ## net
 - ### 验证IPv4的合法性
@@ -168,6 +172,28 @@
 - ### 自定义函数规则替换字符串模版中 $ 符号后的字符串
   ```go
   func ExpandByFun(str string, f func(string) string) string
+  ```
+- ### 使用map替换template模版中 $ 符号后的字符串，返回字符串数组
+  ```go
+  /**
+  *	输入示例：
+  *	"command_fields": {
+  *      "user_id": "1,2,3",
+  *      "prop": "huChao"
+  *   }
+  *
+  *  template: "chartid=${user_id}&prop=${prop}"
+  *
+  *  输出示例：
+  *  [
+  *       "chartid=1&prop=hudaoju",
+  *       "chartid=2&prop=hudaoju",
+  *       "chartid=3&prop=hudaoju"
+  *   ]
+  *
+  */
+  // isMultiple: 是否根据 "," 分割
+  func GetComposedTemplateListExpandByMap(template string, isMultiple bool, fields map[string]string) []string
   ```
 
 ## slice

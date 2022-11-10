@@ -45,3 +45,19 @@ func GetVal(val string) string {
 		return "<Empty>"
 	}
 }
+
+// 替换template模版中 $ 符号后的字符串
+func TestGetComposedTemplateListExpandByMap(t *testing.T) {
+	template := "chartid=$user_id & prop=$prop"
+
+	// 声明map
+	var mapStr map[string]string
+	//使用make函数创建一个非nil的map，nil map不能赋值
+	mapStr = make(map[string]string)
+	//给已声明的map赋值
+	mapStr["user_id"] = "1,2,3"
+	mapStr["prop"] = "huchao"
+
+	strArr := GetComposedTemplateListExpandByMap(template, true, mapStr)
+	fmt.Println("strArr", strArr) // [chartid=1 & prop=huchao chartid=2 & prop=huchao chartid=3 & prop=huchao]
+}
