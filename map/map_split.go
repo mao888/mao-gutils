@@ -1,7 +1,6 @@
 package gutil
 
 import (
-	"github.com/mao888/go-utils/constants"
 	"strings"
 )
 

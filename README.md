@@ -114,6 +114,24 @@
   ```
 
 ## map
+- ### 获取map所有key的方式
+  ```go
+  // 方法1（效率很高）：
+  func getMapKeys1(m map[int]int) []int
+  ```
+  ```go
+  // 方法2（效率很高）：
+  func getMapKeys2(m map[int]int) []int
+  ```
+  ```go
+  // 方法3（效率较低）：
+  func getMapKeys3(m map[int]int) []int
+  ```
+  ```go
+  // 方法4（效率极低）：
+  func getMapKeys4(m map[int]int) int
+  ```
+
 - ### 使用map过滤数组
   ```go
   func FilterSliceByMap(filter map[string]struct{}, pram []string, isExist bool) (array []string)
