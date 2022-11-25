@@ -22,7 +22,7 @@ func DifferenceSet(a []int, b []int) []int {
 
 // RemoveRepByMap 通过map主键唯一的特性过滤重复元素
 // 结构体切片去重
-func removeRepByMap(slc []*SeriesRes) []*SeriesRes {
+func RemoveRepByMap(slc []*SeriesRes) []*SeriesRes {
 	resultMap := make(map[string]*SeriesRes, len(slc))
 	for _, v := range slc {
 		resultMap[v.SeriesId] = v
@@ -34,9 +34,9 @@ func removeRepByMap(slc []*SeriesRes) []*SeriesRes {
 	return result
 }
 
-// RemoveRepByMap 通过map主键唯一的特性过滤重复元素
+// RemoveStructRepByMap 通过map主键唯一的特性过滤重复元素
 // 结构体切片去重
-func removeStructRepByMap(slc []*SeriesRes) []*SeriesRes {
+func RemoveStructRepByMap(slc []*SeriesRes) []*SeriesRes {
 	resultMap := make(map[string]*SeriesRes, len(slc))
 	for _, v := range slc {
 		resultMap[v.SeriesId] = v
