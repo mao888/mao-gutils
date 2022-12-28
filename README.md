@@ -224,6 +224,10 @@
     ``` go
   func removeStructRepByMap(slc []*SeriesRes) []*SeriesRes
     ```
+- ### 切片转链表
+    ``` go
+  func SliceToLinkList(nums []int, head *ListNode) *ListNode
+    ```
 ## strings
 - ### 去除空格
   ```go

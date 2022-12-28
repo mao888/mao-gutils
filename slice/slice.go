@@ -47,3 +47,19 @@ func RemoveStructRepByMap(slc []*SeriesRes) []*SeriesRes {
 	}
 	return result
 }
+
+type ListNode struct {
+	Val  int
+	next *ListNode
+}
+
+// SliceToLinkList 切片转链表
+func SliceToLinkList(nums []int, head *ListNode) *ListNode {
+	node := head
+	for _, num := range nums {
+		temp := ListNode{Val: num}
+		head.next = &temp
+		head = &temp
+	}
+	return node.next
+}
