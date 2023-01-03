@@ -69,7 +69,7 @@ func HttpPostJson(url string, body []byte,
 	return HttpDO(http.MethodPost, url, bytes.NewReader(body), header)
 }
 
-// HttpPostJson http GET Json 请求
+// HttpGetJson http GET Json 请求
 func HttpGetJson(url string, body []byte,
 	header map[string][]string) (httpStatus int, resp []byte, err error) {
 	if header == nil {

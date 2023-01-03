@@ -51,7 +51,8 @@ const (
 )
 
 const (
-	DingTalkURL = "https://oapi.dingtalk.com/robot/send?access_token=88d05964cfbea4879309d721f11c16e15f5cea2b529fabc22c7e836108b08e0d"
+	url         = "https://oapi.dingtalk.com/robot/send?access_token=88d05964cfbea4879309d721f11c16e15f5cea2b529fabc22c7e836108b08e0d"
+	DingTalkURL = "配置自己的钉钉url"
 )
 
 // SendManageEnvType 服务器类型

@@ -10,6 +10,14 @@
   ```go
   func BytesToInt64(buf []byte) int64
   ```
+## dingtalk
+- ### 钉钉报警
+  ```go
+  func DingTalkAlarm(serverName, message string) bool
+  ```
+  ```go
+  func DingTalkAlarmUrl(url, serverName, message string) bool
+  ```
   
 ## hash
 - ### hash算法
