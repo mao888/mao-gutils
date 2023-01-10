@@ -272,7 +272,10 @@
     func StructCopy(src, dst interface{}) (err error)
     ```
 
+## 
 
 持续更新
 
-交流qq群：1007576722
+微信公众号：Gopher毛
+交流QQ群2: 579480724
+交流QQ群1：1007576722(满)
