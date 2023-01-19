@@ -4,6 +4,11 @@ const (
 	LoggerServerCode = "s_code"
 )
 
+const (
+	ServiceCode = "30800"
+	ServiceName = "version-console"
+)
+
 //header field
 const (
 	HeaderXRequestID = "X-Request-ID"
