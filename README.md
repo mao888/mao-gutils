@@ -86,6 +86,15 @@
   func HttpPostFormTimeOut(postUrl string, body map[string][]string,
 	header map[string][]string, millisecond int) (httpStatus int, resp []byte, err error)
   ```
+## interface
+- ### 判断接口具体类型
+  ```go
+  func JudgeType(v interface{}) string
+  ```
+- ### 使用反射判断接口具体类型
+  ```go
+  func JudgeTypeByReflect(v interface{}) string
+  ```
 
 ## json
 - ###
