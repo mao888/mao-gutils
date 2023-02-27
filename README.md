@@ -273,10 +273,14 @@
     ```
 ## time
 - ### 根据开始日期和结束日期计算出时间段内所有日期
-```go
-func GetBetweenMonths(startTime, endTime time.Time) ([]string, error)   // 月
-func GetBetweenDates(startTime, endTime time.Time) ([]string, error)    // 日
-```
+  ```go
+  func GetBetweenMonths(startTime, endTime time.Time) ([]string, error)   // 月
+  func GetBetweenDates(startTime, endTime time.Time) ([]string, error)    // 日
+  ```
+- ### FormatTimeIfNotZero
+  ```go
+  func FormatTimeIfNotZero(time time.Time, layout string) string
+  ```
 
 ## version
 - ### 版本比较
