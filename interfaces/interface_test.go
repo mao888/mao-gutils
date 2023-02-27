@@ -1,6 +1,6 @@
 // Golang program to illustrate the
 // concept of type switches
-package main
+package interfaces
 
 import (
 	"fmt"
@@ -8,7 +8,7 @@ import (
 )
 
 func TestJudgeType(t *testing.T) {
-	// an interface that has
+	// an interfaces that has
 	// a string value
 	var (
 		value  interface{} = "GeeksforGeeks" // string
@@ -28,14 +28,14 @@ func TestJudgeType(t *testing.T) {
 }
 
 func TestJudgeTypeByReflect(t *testing.T) {
-	// an interface that has
+	// an interfaces that has
 	// a string value
 	var (
 		value  interface{} = "GeeksforGeeks" // string
 		value2 interface{} = 1               // int
 		value3 interface{} = 1.11            // float64
 		value4 interface{} = true            // bool
-		//value5 interface{} = nil             // nil
+		//value5 interfaces{} = nil             // nil
 		value6 interface{} = "" // string
 	)
 

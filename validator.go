@@ -111,7 +111,7 @@ func Gt(mark string) string {
 //@author: [piexlmax](https://github.com/piexlmax)
 //@function: Verify
 //@description: 校验方法
-//@param: st interface{}, roleMap Rules(入参实例，规则map)
+//@param: st interfaces{}, roleMap Rules(入参实例，规则map)
 //@return: err error
 
 func Verify(st interface{}, roleMap Rules) (err error) {
@@ -206,7 +206,7 @@ func isBlank(value reflect.Value) bool {
 //@author: [piexlmax](https://github.com/piexlmax)
 //@function: compare
 //@description: 比较函数
-//@param: value interface{}, VerifyStr strings
+//@param: value interfaces{}, VerifyStr strings
 //@return: bool
 
 func compare(value interface{}, VerifyStr string) bool {
