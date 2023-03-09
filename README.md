@@ -10,6 +10,27 @@
   ```go
   func BytesToInt64(buf []byte) int64
   ```
+## data  
+- ### 北京时区
+  ```go
+  func DateCST(layout string) string
+  ```
+- ### 美国标准时区
+  ```go
+  func DatePST(layout string) string
+  ```
+- ### 日本时区
+  ```go
+  func DateJST(layout string) string
+  ```
+- ### 韩国时区
+  ```go
+  func DateKST(layout string) string
+  ```
+- ### UTC时间
+  ```go
+  func DateUTC(layout string) string
+  ```
 ## dingtalk
 - ### 钉钉报警
   ```go
