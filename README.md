@@ -311,6 +311,23 @@
   ```go
   func FormatTimeIfNotZero(time time.Time, layout string) string
   ```
+## uuid
+- ### 生成36位UUID
+  ```go
+  func UUID() string
+  ```
+- ### 生成32位UUID
+  ```go
+  func UUID32() string
+  ```
+- ### 通过内容生成MD5
+  ```go
+  func MD5(body []byte) string
+  ```
+- ### 通过传入的参数生成签名
+  ```go
+  func PramSign(pram []string) string 
+  ```
 
 ## version
 - ### 版本比较
