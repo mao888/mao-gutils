@@ -14,6 +14,10 @@ func UUID() string {
 	return uuid.New().String()
 }
 
+func UUID32() string {
+	return strings.ReplaceAll(UUID(), "-", "")
+}
+
 // MD5 通过内容生成MD5
 func MD5(body []byte) string {
 	h := md5.New()
