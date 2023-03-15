@@ -10,27 +10,6 @@
   ```go
   func BytesToInt64(buf []byte) int64
   ```
-## data  
-- ### 北京时区
-  ```go
-  func DateCST(layout string) string
-  ```
-- ### 美国标准时区
-  ```go
-  func DatePST(layout string) string
-  ```
-- ### 日本时区
-  ```go
-  func DateJST(layout string) string
-  ```
-- ### 韩国时区
-  ```go
-  func DateKST(layout string) string
-  ```
-- ### UTC时间
-  ```go
-  func DateUTC(layout string) string
-  ```
 ## dingtalk
 - ### 钉钉报警
   ```go
@@ -302,6 +281,18 @@
     func StructCopy(src, dst interface{}) (err error)
     ```
 ## time
+- ### 获取当前时间
+  ```go
+  func NowTime() string
+  ```
+- ### 获取当前时间戳
+  ```go
+  func NowUnix() int64
+  ```
+- ### 获取当前时间
+  ```go
+  func UnixToFormatTime(timeStamp int64) string
+  ```
 - ### 根据开始日期和结束日期计算出时间段内所有日期
   ```go
   func GetBetweenMonths(startTime, endTime time.Time) ([]string, error)   // 月
@@ -311,6 +302,28 @@
   ```go
   func FormatTimeIfNotZero(time time.Time, layout string) string
   ```
+## time - 时区
+- ### 北京时区
+  ```go
+  func DateCST(layout string) string
+  ```
+- ### 美国标准时区
+  ```go
+  func DatePST(layout string) string
+  ```
+- ### 日本时区
+  ```go
+  func DateJST(layout string) string
+  ```
+- ### 韩国时区
+  ```go
+  func DateKST(layout string) string
+  ```
+- ### UTC时间
+  ```go
+  func DateUTC(layout string) string
+  ```  
+
 ## uuid
 - ### 生成36位UUID
   ```go
