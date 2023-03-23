@@ -18,7 +18,80 @@
   ```go
   func DingTalkAlarmUrl(url, serverName, message string) bool
   ```
+## encryption
+- ### AES加密
+  ```go
+  func AESEncrypt(msg, key []byte) []byte
   
+  func AESEncryptE(msg, key []byte) ([]byte, error)
+  
+  func AESEncryptIv(msg, key, iv []byte) ([]byte, error)
+  ```
+- ### AES解密
+  ```go
+  func AESDecrypt(msg, key []byte) []byte
+  
+  func AESDecryptE(msg, key []byte) ([]byte, error)
+  
+  func AESDecryptIv(msg, key, iv []byte) ([]byte, error)
+  ```
+- ### RSA加密
+  ```go
+  func RSAEncrypt(public []byte, msg []byte) []byte
+  
+  func RSAEncryptE(public []byte, msg []byte) ([]byte, error)
+  
+  func RSAEncryptPKCS1(public []byte, msg []byte) []byte
+  
+  func RSAEncryptPKCS1E(public []byte, msg []byte) ([]byte, error)
+  
+  func RSAEncryptPem(public []byte, msg []byte) []byte
+  
+  func RSAEncryptPemE(public []byte, msg []byte) ([]byte, error)
+  
+  func RSAEncryptPKCS1Pem(public []byte, msg []byte) []byte
+  
+  func RSAEncryptPKCS1PemE(public []byte, msg []byte) ([]byte, error)
+  
+  func RSAEncryptString(public, msg []byte) []byte
+  
+  func RSAEncryptStringE(public, msg []byte) ([]byte, error)
+  
+  func RSAEncryptPKCS1String(public, msg []byte) []byte
+  
+  func RSAEncryptPKCS1StringE(public, msg []byte) ([]byte, error)
+  ```
+- ### RSA解密
+  ```go
+  // RSADecrypt 使用私钥进行解密
+  func RSADecrypt(private []byte, cipherText []byte) []byte
+  
+  // RSADecryptPKCS1 使用私钥进行解密
+  func RSADecryptPKCS1(private []byte, cipherText []byte) []byte
+  
+  // RSADecryptE 使用私钥进行解密
+  func RSADecryptE(private []byte, cipherText []byte) ([]byte, error)
+  
+  // RSADecryptPKCS1E 使用私钥进行解密
+  func RSADecryptPKCS1E(private []byte, cipherText []byte) ([]byte, error)
+  
+  // RSADecryptPem 使用私钥（pem格式）进行解密
+  func RSADecryptPem(private []byte, cipherText []byte) []byte
+  
+  // RSADecryptPKCS1Pem 使用私钥（pem格式）进行解密
+  func RSADecryptPKCS1Pem(private []byte, cipherText []byte) []byte
+  
+  // RSADecryptString 使用私钥（String格式）进行解密
+  func RSADecryptString(private, cipherText []byte) []byte
+  
+  // RSADecryptPKCS1String 使用私钥（String格式）进行解密
+  func RSADecryptPKCS1String(private, cipherText []byte) []byte
+  
+  // RSADecryptPemE 使用私钥（pem格式）进行解密
+  func RSADecryptPemE(private []byte, cipherText []byte) ([]byte, error)
+  
+  // RSADecryptStringE 使用私钥（String格式）进行解密
+  ```
 ## hash
 - ### hash算法
   ```go
