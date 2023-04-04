@@ -1,6 +1,7 @@
 package gutil
 
 import (
+	"fmt"
 	"io"
 	"reflect"
 	"testing"
@@ -201,4 +202,33 @@ func TestHttpGetJson(t *testing.T) {
 			}
 		})
 	}
+}
+
+func TestHttpPostMultipart(t *testing.T) {
+	file := getFileBytes("https://ark-oss.bettagames.com/2023-03/9744ac8f667b20048590f0051b15e90d.mp4")
+	fmt.Println("文件大小：", len(file))
+	url := "https://ad.oceanengine.com/open_api/2/file/video/ad/"
+	formData := map[string]string{
+		"advertiser_id":   "1760312309087432",
+		"upload_type":     "UPLOAD_BY_FILE",
+		"video_signature": "9744ac8f667b20048590f0051b15e90d",
+	}
+	fileData := map[string]FileObject{"video_file": {
+		Name:    "auto4_1111111111.11111111_游戏35和36__V_ZJR_ZJR_en_16X9_33s",
+		Content: file,
+	}}
+	header := map[string]string{
+		"Content-Type": "multipart/form-data",
+		"Access-Token": "b6d470f1a2190665f6bb0d77e395911bb7384abf",
+	}
+	code, resp, err := HttpPostMultipart(url, formData, fileData, header)
+	fmt.Println("响应状态码：", code)
+	fmt.Println("响应体：", string(resp))
+	fmt.Println(err)
+}
+
+func getFileBytes(url string) []byte {
+	code, body, err := HttpGet(url, nil, nil)
+	fmt.Println(code, err)
+	return body
 }

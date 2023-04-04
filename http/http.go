@@ -4,6 +4,7 @@ import (
 	"bytes"
 	"io"
 	"io/ioutil"
+	"mime/multipart"
 	"net/http"
 	"net/url"
 	"strings"
@@ -132,4 +133,54 @@ func HttpPostFormTimeOut(postUrl string, body map[string][]string,
 	header["Content-Type"] = []string{"application/x-www-form-urlencoded"}
 	return HttpDOTimeOut(http.MethodPost, postUrl,
 		strings.NewReader(url.Values(body).Encode()), header, millisecond)
+}
+
+//HttpPostMultipart 通过multipart/form-data请求数据
+func HttpPostMultipart(url string, formData map[string]string, fileData map[string]FileObject,
+	header map[string]string) (httpStatus int, resp []byte, err error) {
+
+	payload := &bytes.Buffer{}
+	writer := multipart.NewWriter(payload)
+	for k, v := range formData {
+		_ = writer.WriteField(k, v)
+	}
+	for k, v := range fileData {
+		fileWriter, err := writer.CreateFormFile(k, v.Name)
+		if err != nil {
+			return 0, nil, err
+		}
+		_, err = io.Copy(fileWriter, bytes.NewReader(v.Content))
+		if err != nil {
+			return 0, nil, err
+		}
+	}
+	err = writer.Close()
+	if err != nil {
+		return 0, nil, err
+	}
+	client := &http.Client{}
+	req, err := http.NewRequest(http.MethodPost, url, payload)
+	if err != nil {
+		return 0, nil, err
+	}
+	for k, v := range header {
+		req.Header.Add(k, v)
+	}
+	if len(fileData) > 0 {
+		req.Header.Set("Content-Type", writer.FormDataContentType())
+	}
+	response, err := client.Do(req)
+	if err != nil {
+		return 0, nil, err
+	}
+	defer func() {
+		_ = response.Body.Close()
+	}()
+	resp, err = ioutil.ReadAll(response.Body)
+	return response.StatusCode, resp, err
+}
+
+type FileObject struct {
+	Name    string
+	Content []byte
 }
