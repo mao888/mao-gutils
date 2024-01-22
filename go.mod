@@ -7,9 +7,9 @@ require (
 	github.com/aws/aws-sdk-go v1.44.70
 	github.com/caict-4iot-dev/BIF-Core-SDK-Go v0.0.0-20220603054356-62579e70e05a
 	github.com/gin-gonic/gin v1.8.1
-	github.com/golang/protobuf v1.5.2
 	github.com/google/uuid v1.3.0
 	github.com/json-iterator/go v1.1.12
+	github.com/mao888/mao-gerrors v1.1.0
 	github.com/rabbitmq/amqp091-go v1.4.0
 	github.com/robfig/cron/v3 v3.0.1
 	github.com/satori/go.uuid v1.2.0
