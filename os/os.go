@@ -1,7 +1,7 @@
 package os
 
 import (
-	gutil "github.com/mao888/go-utils/map"
+	gutil "github.com/mao888/mao-gutils/map"
 	"os"
 )
 

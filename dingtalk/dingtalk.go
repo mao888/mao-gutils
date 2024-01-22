@@ -5,9 +5,9 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/mao888/go-utils/http"
+	"github.com/mao888/mao-gutils/http"
 
-	"github.com/mao888/go-utils/constants"
+	"github.com/mao888/mao-gutils/constants"
 )
 
 const (

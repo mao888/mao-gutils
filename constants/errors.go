@@ -1,6 +1,6 @@
 package constants
 
-import gerrors "github.com/mao888/go-errors"
+import gerrors "github.com/mao888/mao-gerrors"
 
 const (
 	ErrorCreateGameSQLCode = 306001
@@ -104,7 +104,7 @@ const (
 	ErrorGameIDParamMsg           = "游戏ID参数错误，请检查参数"
 )
 
-//	礼包码业务错误
+// 礼包码业务错误
 const (
 	ErrNotFondGiftCodeIDCode = 500001
 	ErrNotFondGiftCodeIDMsg  = "找不到礼包码ID"
