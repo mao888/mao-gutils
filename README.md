@@ -1,8 +1,17 @@
 # mao-gutils README
 基于日常学习及项目需要所积累的go语言常用工具库
 
-## concurrent
-- ### 🚀 并发执行器（[ConcurrentExecuteBetter](https://github.com/mao888/mao-gutils/blob/main/concurrent/concurrent.go)）
+# 下载
+```bash
+go get github.com/mao888/mao-gutils
+```
+
+## 🚀 concurrent
+- ### [ConcurrentExecute](https://github.com/mao888/mao-gutils/blob/main/concurrent/concurrent.go) (并发执行器)
+  ```go
+  ConcurrentExecute[T any, R any](execute ConcurrentFunc[T, R], params []T, limit int) []ConcurrentResult[R]
+  ```
+- ### [ConcurrentExecuteBetter](https://github.com/mao888/mao-gutils/blob/main/concurrent/concurrent.go) (并发执行器 - 带有更明确的错误信息)
   ```go
   func ConcurrentExecuteBetter[T any, R any](execute ConcurrentFunc[T, R], params []T, limit int) ConcurrentResultBetter[R]
   ```
