@@ -1,6 +1,18 @@
 # mao-gutils README
 基于日常学习及项目需要所积累的go语言常用工具库
 
+## concurrent
+- ### 🚀 并发执行器（[ConcurrentExecuteBetter](https://github.com/mao888/mao-gutils/blob/main/concurrent/concurrent.go)）
+  ```go
+  func ConcurrentExecuteBetter[T any, R any](execute ConcurrentFunc[T, R], params []T, limit int) ConcurrentResultBetter[R]
+  ```
+  ConcurrentExecuteBetter 是一个通用的并发执行工具函数，支持：
+  - ✅ 限制最大并发数（协程池效果）
+  - ✅ 泛型参数输入
+  - ✅ 泛型结果返回收集
+  - ✅ 错误统一汇总
+  - ✅ 适用于批量任务处理等场景
+
 ## byte
 - ### int64 to byte
   ```go
