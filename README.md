@@ -15,12 +15,15 @@ go get github.com/mao888/mao-gutils
   ```go
   func ConcurrentExecuteBetter[T any, R any](execute ConcurrentFunc[T, R], params []T, limit int) ConcurrentResultBetter[R]
   ```
+  #### 📖 说明
   ConcurrentExecuteBetter 是一个通用的并发执行工具函数，支持：
   - ✅ 限制最大并发数（协程池效果）
   - ✅ 泛型参数输入
   - ✅ 泛型结果返回收集
   - ✅ 错误统一汇总
   - ✅ 适用于批量任务处理等场景
+  
+  #### ✨ [使用示例](https://github.com/mao888/mao-gutils/blob/main/concurrent/concurrent_test.go)
 
 ## byte
 - ### int64 to byte
