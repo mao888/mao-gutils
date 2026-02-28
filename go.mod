@@ -1,6 +1,6 @@
 module github.com/mao888/mao-gutils
 
-go 1.19
+go 1.25
 
 require (
 	github.com/ZZMarquis/gm v1.3.2

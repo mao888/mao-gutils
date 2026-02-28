@@ -63,3 +63,27 @@ func SliceToLinkList(nums []int, head *ListNode) *ListNode {
 	}
 	return node.next
 }
+
+const defaultArraySplitSize = 30
+
+// SplitArray 按指定大小将切片分片（ps：批量的批量）
+// @params data 原始切片
+// @params size 每个分片的长度，<=0 时使用默认值 30
+// @return [][]E 分片后的切片集合
+func SplitArray[E any](data []E, size int) [][]E {
+	if len(data) == 0 {
+		return nil
+	}
+	if size <= 0 {
+		size = defaultArraySplitSize
+	}
+	result := make([][]E, 0, (len(data)/size)+1)
+	for i, value := range data {
+		index := i / size
+		if i%size == 0 {
+			result = append(result, make([]E, 0, size))
+		}
+		result[index] = append(result[index], value)
+	}
+	return result
+}
