@@ -2,8 +2,8 @@ name: Auto PR
 
 on:
   push:
-#    branches-ignore:
-#      - main
+    branches-ignore:
+      - main
 
 jobs:         # GitHub Actions 的“任务列表”
   create-pr:  # job 名字 随便取
