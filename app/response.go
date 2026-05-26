@@ -22,6 +22,7 @@ func ResponseError(c *gin.Context, code ResCode) {
 	})
 }
 
+// ResponseError400 返回错误响应
 func ResponseError400(c *gin.Context, code ResCode) {
 	c.JSON(http.StatusBadRequest, &ResponseData{
 		Code: code,
